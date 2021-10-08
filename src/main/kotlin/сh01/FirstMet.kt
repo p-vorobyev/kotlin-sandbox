@@ -1,4 +1,4 @@
-package ср01
+package сh01
 
 data class Person(val name: String,
                   val age: Int? = null)
