@@ -1,0 +1,2 @@
+kotlinc src -include-runtime -d firstMet.jar
+(если это бибилиотека для подключения в другой проект, то опцию -include-runtime можно исключить)
