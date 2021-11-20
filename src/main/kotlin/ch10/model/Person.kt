@@ -7,7 +7,16 @@ import ch10.annotations.JsonName
 import ch10.serializers.DateSerializer
 import java.util.*
 
-data class Person(@JsonName("alias") val name: String,
-                  @JsonExclude val age: Int? = null,
-                  @CustomSerializer(DateSerializer::class) val birth: Date? = null,
-                  @DeserializeInterface(CompanyImpl::class) val company: Company)
+data class Person(
+    @JsonName("alias")
+    val name: String,
+
+    @JsonExclude
+    val age: Int? = null,
+
+    @CustomSerializer(DateSerializer::class)
+    val birth: Date? = null,
+
+    @DeserializeInterface(CompanyImpl::class)
+    val company: Company = CompanyImpl("unemployed")
+)
